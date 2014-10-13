@@ -257,10 +257,11 @@ class people::amerdidit {
   # include sourcetree # http://www.sourcetreeapp.com/
   # include spotify # https://www.spotify.com/
   # include statsd # https://github.com/boxen/puppet-statsd
-  include sublime_text_2 # http://www.sublimetext.com//
-  sublime_text_2::package { 'Emmet':
-    source => 'sergeche/emmet-sublime'
-  }
+  # For the latest build of v3
+    include sublime_text
+    sublime_text::package { 'Emmet':
+      source => 'sergeche/emmet-sublime'
+    }
   # include swig # http://www.swig.org/
   # sysctl::set { 'somekey':
   #   value => 'somevalue'
